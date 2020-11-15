@@ -1,0 +1,5 @@
+FROM openjdk:8
+WORKDIR /app/passenger-core/
+COPY ./target/passenger-core.jar ./
+EXPOSE ${SERVER_PORT}
+ENTRYPOINT ["java","-jar","passenger-core.jar"]
